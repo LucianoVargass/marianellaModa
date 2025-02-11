@@ -562,7 +562,7 @@ textarea.form-control {
   }
 }
 .banner-section {
-  background: url('../images/spring-wardrobe-switch-still-life.jpg') no-repeat center center;
+  background: url('spring-wardrobe-switch-still-life.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
