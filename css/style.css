@@ -233,7 +233,7 @@ a:hover {
   background: #C7B2A7 !important;
 }
 .bg-primary-1 {
-  background: url('../images/backgrounds/still-life-fashion-designer-s-office.jpg') no-repeat center center;
+  background: url('../images/backgrounds/women-having-fun-together-enjoying-weekend.jpg') no-repeat center center;
   background-size: cover;
   -webkit-background-size: cover; /* Compatibilidad con navegadores más antiguos */
   -moz-background-size: cover;
@@ -562,7 +562,7 @@ textarea.form-control {
   }
 }
 .banner-section {
-  background: url('spring-wardrobe-switch-still-life.jpg') no-repeat center center;
+  background: url('../images/spring-wardrobe-switch-still-life.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   color: #fff;
@@ -942,3 +942,47 @@ blockquote {
   font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
+.banner-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.banner-subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.banner-text {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  font-size: 1.5rem;
+  color: #ff4081;
+  font-weight: bold;
+}
+
+.card {
+  border: none;
+  text-align: center;
+}
+
+.icon-highlight {
+  font-size: 2rem;
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+.banner-button {
+  background-color: #ff4081;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.banner-button:hover {
+  background-color: #d83470;
+}
