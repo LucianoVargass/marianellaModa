@@ -419,11 +419,10 @@
           <div class="col-lg-8 mx-auto">
             <div class="bg-white rounded text-center p-5 shadow-down">
               <h4 class="mb-80">Contact Form</h4>
-              <form action="#" class="row">
+              <form id="contact-form" class="row" action="https://formspree.io/f/mbldwdjd" method="POST">
                 <div class="col-md-6">
                   <input
                     type="text"
-                    id="name"
                     name="name"
                     placeholder="Nombre"
                     class="form-control px-0 mb-4"
@@ -433,7 +432,6 @@
                 <div class="col-md-6">
                   <input
                     type="email"
-                    id="email"
                     name="email"
                     placeholder="Email"
                     class="form-control px-0 mb-4"
@@ -443,15 +441,15 @@
                 <div class="col-12">
                   <textarea
                     name="message"
-                    id="message"
                     class="form-control px-0 mb-4"
-                    placeholder="Deje su mensaje...."
+                    placeholder="Deje su mensaje..."
                     required
                   ></textarea>
                 </div>
                 <div class="col-lg-6 col-10 mx-auto">
-                  <button class="btn btn-primary w-100">send</button>
+                  <button type="submit" class="btn btn-primary w-100">Enviar</button>
                 </div>
+                <div id="form-message" class="col-12 text-center mt-3"></div>
               </form>
             </div>
           </div>
@@ -550,6 +548,30 @@
         }
       });
     </script>
+<script>
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Evita la recarga de la página
+
+    let formData = new FormData(this);
+
+    fetch(this.action, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("form-message").innerHTML = "<p>✅ Mensaje enviado con éxito.</p>";
+        document.getElementById("form-message").style.color = "green";
+        this.reset(); // Limpia el formulario
+    })
+    .catch(error => {
+        document.getElementById("form-message").innerHTML = "<p>❌ Error al enviar el mensaje.</p>";
+        document.getElementById("form-message").style.color = "red";
+    });
+});
+
+</script>
     
     <!-- jQuery -->
     <script src="plugins/jQuery/jquery.min.js"></script>
